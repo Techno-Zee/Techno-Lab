@@ -1,0 +1,16 @@
+{
+  "name": "techno-lab-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tome dev",
+    "build": "tome build",
+    "deploy": "tome deploy"
+  },
+  "devDependencies": {
+    "@tomehq/cli": "^0.8.1",
+    "@tomehq/theme": "^0.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
