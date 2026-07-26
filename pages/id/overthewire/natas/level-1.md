@@ -7,26 +7,26 @@ sidebarTitle: "Level 1 — Bypass Pembatasan Input"
 ## Profil
 
 - **Target:** `http://natas1.natas.labs.overthewire.org`
-- **Kredensial:** `natas1` / (password dari Level 0)
+- **Kredensial:** `natas1` / (*password* dari Level 0)
 
 ## Pengintaian
 
-Halaman terlihat mirip dengan Level 0 tetapi klik kanan dinonaktifkan melalui atribut `oncontextmenu`. Ini adalah pembatasan sisi klien yang hanya memengaruhi menu konteks — tidak mencegah akses sumber melalui metode lain.
+Laman ini tampak serupa dengan Level 0, namun fungsi klik kanan telah dinonaktifkan melalui atribut `oncontextmenu`. Pembatasan ini bersifat *client-side* dan hanya memengaruhi menu konteks — tidak menghalangi akses sumber laman melalui metode alternatif.
 
 ## Analisis
 
-Atribut `oncontextmenu` pada tag `<body>` diatur ke `return false;`, yang mencegah menu konteks klik kanan browser muncul. Ini adalah langkah keamanan lemah karena:
+Atribut `oncontextmenu` pada tag `<body>` diatur dengan nilai `return false;`, yang mengakibatkan menu konteks default browser tidak muncul saat klik kanan. Mekanisme pengamanan ini sangat lemah karena:
 
-1. Hanya memblokir satu metode akses sumber
-2. Dapat dilewati dengan pintasan keyboard atau menu browser
-3. Juga bisa dilewati dengan menonaktifkan JavaScript sepenuhnya
+1. Hanya memblokir satu metode akses terhadap sumber laman
+2. Dapat dilewati dengan pintasan papan tik atau menu browser
+3. Dapat dihindari dengan menonaktifkan JavaScript sepenuhnya
 
-Metode bypass:
+Metode *bypass* yang dapat digunakan:
 
-- **Pintasan keyboard:** `Ctrl+U` / `Cmd+U` membuka sumber langsung
-- **Developer tools:** `F12` atau `Ctrl+Shift+I` / `Cmd+Opt+I`
-- **Awalan URL:** `view-source:http://natas1.natas.labs.overthewire.org`
+- **Pintasan papan tik:** `Ctrl+U` / `Cmd+U` untuk membuka sumber laman secara langsung
+- **Perangkat pengembang:** `F12` atau `Ctrl+Shift+I` / `Cmd+Opt+I`
+- **Prefiks URL:** `view-source:http://natas1.natas.labs.overthewire.org`
 
 ## Hasil
 
-Sumber berisi komentar HTML yang identik dengan Level 0. Password untuk Level 2 diperoleh. Level ini menunjukkan bahwa pembatasan sisi klien tidak memberikan keamanan nyata dan selalu dapat dihindari melalui fitur browser alternatif.
+Sumber laman memuat komentar HTML yang identik dengan struktur Level 0. *Password* untuk Level 2 berhasil diperoleh. Level ini menegaskan bahwa pembatasan sisi klien tidak memberikan keamanan yang sesungguhnya dan senantiasa dapat diakali melalui fitur *browser* alternatif.

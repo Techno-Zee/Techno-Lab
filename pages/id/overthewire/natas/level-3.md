@@ -7,29 +7,29 @@ sidebarTitle: "Level 3 — Robots.txt Enumeration"
 ## Profil
 
 - **Target:** `http://natas3.natas.labs.overthewire.org`
-- **Kredensial:** `natas3` / (password dari Level 2)
+- **Kredensial:** `natas3` / (*password* dari Level 2)
 
 ## Pengintaian
 
-Sumber halaman menunjukkan `<div id="content">` kosong tanpa komentar yang membantu. Petunjuknya mengindikasikan bahwa mesin pencari seperti Google mungkin mengindeks sesuatu yang tidak diinginkan.
+Sumber laman menunjukkan `<div id="content">` yang kosong tanpa komentar berarti. Indikasi yang ada mengarah pada kemungkinan bahwa mesin pencari semisal Google mungkin telah mengindeks sesuatu yang tidak semestinya.
 
 ## Analisis
 
-Mengambil `/robots.txt` menghasilkan:
+Permintaan terhadap `/robots.txt` memberikan hasil:
 
 ```text
 User-agent: *
 Disallow: /s3cr3t/
 ```
 
-Arahan `Disallow` memberi tahu crawler untuk tidak mengindeks `/s3cr3t/`. Namun, ini adalah langkah keamanan yang lemah karena siapa pun yang tahu cara memeriksa `robots.txt` dapat melihat persis apa yang disembunyikan.
+Arahan `Disallow` menginstruksikan *crawler* untuk tidak mengindeks `/s3cr3t/`. Namun, pendekatan ini merupakan bentuk *security-through-obscurity* — siapa pun yang mengetahui cara memeriksa `robots.txt` dapat melihat secara persis apa yang coba disembunyikan.
 
 ## Eksploitasi
 
-Mengunjungi `/s3cr3t/` menampilkan daftar direktori yang berisi `users.txt`. Mengakses file ini mengembalikan password untuk Level 4.
+Navigasi ke `/s3cr3t/` menampilkan daftar direktori yang berisi `users.txt`. Akses terhadap berkas ini mengembalikan *password* untuk Level 4.
 
 ## Remediasi
 
-- Jangan mengandalkan `robots.txt` untuk kontrol akses — ini adalah arahan crawler, bukan mekanisme keamanan
-- Direktori sensitif harus dilindungi dengan autentikasi
-- Gunakan kontrol akses tingkat server daripada mengandalkan ketidakjelasan
+- Jangan mengandalkan `robots.txt` sebagai mekanisme kontrol akses — berkas ini hanyalah arahan bagi *crawler*, bukan pengamanan yang legitimate
+- Direktori sensitif wajib dilindungi dengan mekanisme autentikasi yang layak
+- Gunakan kontrol akses tingkat server daripada bersandar pada ketidakjelasan (*obscurity*)

@@ -11,17 +11,17 @@ sidebarTitle: "Level 0 — Review Sumber HTML"
 
 ## Pengintaian
 
-Halaman menampilkan pesan sederhana tanpa elemen interaktif yang jelas. Langkah pertama dalam setiap pengujian web adalah memeriksa kode sumber HTML, karena pengembang sering meninggalkan informasi sensitif di komentar atau elemen tersembunyi selama pengembangan.
+Laman menampilkan pesan sederhana tanpa elemen interaktif yang jelas. Langkah awal dalam setiap pengujian keamanan web adalah memeriksa kode sumber HTML, karena pengembang kerap meninggalkan informasi sensitif di dalam komentar atau elemen tersembunyi selama proses pengembangan.
 
-Melihat sumber halaman dapat dilakukan melalui:
+Terdapat beberapa metode untuk mengakses sumber laman:
 
 - Klik kanan → "Inspect" atau "View Page Source"
-- Pintasan keyboard `Ctrl+U` (Windows/Linux) atau `Cmd+U` (macOS)
-- Menambahkan `view-source:` di depan URL
+- Pintasan papan tik `Ctrl+U` (Windows/Linux) atau `Cmd+U` (macOS)
+- Menambahkan prefiks `view-source:` sebelum URL
 
 ## Analisis
 
-Sumber halaman berisi dokumen HTML standar. Di dalam `<body>`, terdapat komentar HTML yang terlihat:
+Sumber laman memuat dokumen HTML standar. Di dalam tag `<body>`, terdapat komentar HTML yang kasat mata:
 
 ```html
 <body>
@@ -33,8 +33,8 @@ Sumber halaman berisi dokumen HTML standar. Di dalam `<body>`, terdapat komentar
 </body>
 ```
 
-Komentar HTML tidak ditampilkan di rendering tetapi tetap dapat dibaca sepenuhnya di sumber. Ini adalah kerentanan kebocoran informasi umum di mana pengembang menggunakan komentar untuk debugging dan lupa menghapusnya sebelum deployment.
+Komentar HTML tidak ditampilkan pada *rendering* browser tetapi tetap dapat dibaca sepenuhnya melalui sumber laman. Ini merupakan kerentanan kebocoran informasi yang lazim terjadi, di mana pengembang menyisipkan komentar untuk keperluan *debugging* dan lupa menghapusnya sebelum *deployment*.
 
 ## Hasil
 
-Komentar tersebut berisi password untuk Level 1. Tidak diperlukan vektor serangan lain — flag diperoleh murni melalui review sumber.
+Komentar tersebut memuat *password* untuk Level 1. Tidak diperlukan vektor serangan tambahan — *flag* diperoleh semata-mata melalui peninjauan sumber laman.

