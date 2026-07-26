@@ -2,7 +2,7 @@
 export default {
   name: "Techno-Lab",
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "id",
     locales: ["en", "id"],
     localeNames: {
       en: "English",
