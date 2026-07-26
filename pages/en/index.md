@@ -1,15 +1,14 @@
 ---
 title: Techno-Lab
 description: A collection of CTF writeups and security research by Techno-Zee.
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 # Techno-Lab
 
 A collection of Capture The Flag (CTF) writeups, security research, and exploitation notes. Each writeup documents the methodology, tools, and thought process behind solving a challenge.
-
-## Template
-
-Use the [writeup template](/template) as a starting point for documenting new challenges.
 
 ## OverTheWire — Natas
 
@@ -29,3 +28,5 @@ Use the [writeup template](/template) as a starting point for documenting new ch
 | [Level 9](/overthewire/natas/level-9) | Command Injection | ✅ |
 | [Level 10](/overthewire/natas/level-10) | Input Filter Bypass | ✅ |
 | [Level 11](/overthewire/natas/level-11) | XOR Cryptanalysis | ✅ |
+
+-->

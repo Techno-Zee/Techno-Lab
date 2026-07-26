@@ -2,7 +2,10 @@
 title: "Level 4"
 description: Spoofing the HTTP Referer header to bypass origin-based access controls.
 sidebarTitle: "Level 4 — Referer Spoofing"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -54,3 +57,5 @@ The server accepts the forged header and returns the password for Level 5.
 ## References
 
 - [MDN: Referer header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)
+
+-->

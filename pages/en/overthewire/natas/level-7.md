@@ -2,7 +2,10 @@
 title: "Level 7"
 description: Exploiting Local File Inclusion to read arbitrary files from the server.
 sidebarTitle: "Level 7 — Local File Inclusion"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -54,3 +57,5 @@ curl -u natas7:$(cat password7) \
 ## References
 
 - [OWASP: Testing for Local File Inclusion](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion)
+
+-->

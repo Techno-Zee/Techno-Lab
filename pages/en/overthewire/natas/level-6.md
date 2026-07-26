@@ -2,7 +2,10 @@
 title: "Level 6"
 description: Reading included PHP source files that expose application secrets.
 sidebarTitle: "Level 6 — Source Code Disclosure"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -44,3 +47,5 @@ Submitting this secret value through the form triggers the "Access granted" resp
 ## References
 
 - [OWASP: Sensitive Data Exposure](https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure)
+
+-->

@@ -2,7 +2,10 @@
 title: "Level 1"
 description: Bypassing client-side input restrictions to view the page source.
 sidebarTitle: "Level 1 — Input Restriction Bypass"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -36,3 +39,5 @@ The source contains an HTML comment identical in structure to Level 0:
 ```
 
 The password for Level 2 is obtained. This level demonstrates that client-side restrictions provide no real security and can always be circumvented through alternative browser features.
+
+-->

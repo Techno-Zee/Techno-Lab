@@ -2,7 +2,10 @@
 title: "Level 11"
 description: Recovering an XOR encryption key through known-plaintext attack to forge authenticated cookies.
 sidebarTitle: "Level 11 — XOR Cryptanalysis"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -134,3 +137,5 @@ The application decrypts the forged cookie and reads `showpassword` as `"yes"`, 
 
 - [XOR cipher — Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
 - [OWASP: Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+
+-->

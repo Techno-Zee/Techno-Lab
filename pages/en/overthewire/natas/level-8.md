@@ -2,7 +2,10 @@
 title: "Level 8"
 description: Reversing a multi-layered encoding function to recover the original input.
 sidebarTitle: "Level 8 — Encoded Secret Reversal"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -86,3 +89,5 @@ Submitting `oubWYf2kBq` as the secret triggers the "Access granted" response and
 
 - [PHP: bin2hex](https://www.php.net/manual/en/function.bin2hex.php)
 - [PHP: base64_encode](https://www.php.net/manual/en/function.base64-encode.php)
+
+-->

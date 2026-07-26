@@ -2,7 +2,10 @@
 title: "Level 3"
 description: Leveraging robots.txt to discover hidden directories.
 sidebarTitle: "Level 3 — Robots.txt Enumeration"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -39,3 +42,5 @@ Navigating to `/s3cr3t/` reveals a directory listing containing `users.txt`. Acc
 ## References
 
 - [Google robots.txt documentation](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+
+-->

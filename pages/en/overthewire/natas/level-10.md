@@ -2,7 +2,10 @@
 title: "Level 10"
 description: Bypassing input filters by exploiting grep's multi-file matching behavior.
 sidebarTitle: "Level 10 — Input Filter Bypass"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -56,7 +59,7 @@ Causes the following effective command:
 grep -i .* /etc/natas_webpass/natas10 # dictionary.txt
 ```
 
-The `.*` pattern matches all lines. `grep` searches both `/etc/natas_webpass/natas10` and `dictionary.txt`, but everything after `#` is treated as a comment by the shell (though in practice, the `#` becomes part of the file argument — it still works because `grep` will search the specified password file).
+The `.*` pattern matches all lines. `grep` searches both `/etc/natas_webpass/natas10` and `dictionary.txt`, but everything after `#` is treated as a comment by the shell.
 
 Alternative working payloads:
 
@@ -73,3 +76,5 @@ Alternative working payloads:
 
 - [OWASP: Command Injection — Filter Bypass](https://owasp.org/www-community/attacks/Command_Injection)
 - [PHP: preg_match()](https://www.php.net/manual/en/function.preg-match.php)
+
+-->

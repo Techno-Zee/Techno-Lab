@@ -2,7 +2,10 @@
 title: "Level 9"
 description: Exploiting unsanitized input passed to passthru() for command injection.
 sidebarTitle: "Level 9 — Command Injection"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -62,3 +65,5 @@ Alternative payloads using other shell operators:
 - [OWASP: Command Injection](https://owasp.org/www-community/attacks/Command_Injection)
 - [CWE-78: OS Command Injection](https://cwe.mitre.org/data/definitions/78.html)
 - [PHP: passthru()](https://www.php.net/manual/en/function.passthru.php)
+
+-->

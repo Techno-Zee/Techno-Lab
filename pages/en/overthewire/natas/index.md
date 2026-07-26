@@ -2,7 +2,10 @@
 title: "Natas — Overview"
 description: OverTheWire Natas wargame — server-side web security challenges.
 sidebarTitle: Overview
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 [Natas](https://overthewire.org/wargames/natas/) is a wargame that teaches the fundamentals of server-side web security. Each level presents a web application with a distinct vulnerability. The objective is to locate the password for the subsequent level, which is always hidden somewhere within the current challenge.
 
@@ -38,3 +41,5 @@ The default credentials for Level 0 are `natas0` / `natas0`. From there, each le
 - Browser developer tools (inspect element, network tab)
 - Burp Suite Community Edition (proxy, repeater)
 - Command-line tools (curl, base64, PHP CLI)
+
+-->

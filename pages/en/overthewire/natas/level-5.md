@@ -2,7 +2,10 @@
 title: "Level 5"
 description: Tampering with cookies to bypass authentication checks.
 sidebarTitle: "Level 5 — Cookie Manipulation"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -26,12 +29,6 @@ The `loggedin` cookie is a boolean-like flag stored on the client side. The serv
 ## Exploitation
 
 Using Burp Suite, intercept the request and modify the cookie value before forwarding:
-
-```http
-Cookie: loggedin=0
-```
-
-Change it to:
 
 ```http
 Cookie: loggedin=1
@@ -65,3 +62,5 @@ The server treats the modified cookie as authentic and returns the password for 
 ## References
 
 - [OWASP: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+
+-->

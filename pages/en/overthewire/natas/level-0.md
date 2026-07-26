@@ -2,7 +2,10 @@
 title: "Level 0"
 description: Locating a password hidden within HTML source code.
 sidebarTitle: "Level 0 — HTML Source Review"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -38,3 +41,5 @@ HTML comments are stripped from rendering but remain fully readable in the sourc
 ## Result
 
 The comment contains the password for Level 1. No other attack vectors are necessary — the flag is obtained purely through source review.
+
+-->

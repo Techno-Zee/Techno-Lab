@@ -2,7 +2,10 @@
 title: "Level 2"
 description: Enumerating directories and files through path traversal.
 sidebarTitle: "Level 2 — Directory Traversal"
+hidden: true
 ---
+
+<!-- English content is temporarily disabled. Please refer to the Indonesian (id) version.
 
 ## Profile
 
@@ -46,3 +49,5 @@ Accessing `/files/users.txt` returns the contents, which include the password fo
 - Disable directory listing on the web server
 - Store sensitive files outside the web root
 - Implement access controls for protected resources
+
+-->
