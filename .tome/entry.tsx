@@ -4,7 +4,7 @@ const LOCALE_KEY = "tome-pref-locale";
   const saved = localStorage.getItem(LOCALE_KEY);
   const path = window.location.pathname;
   const m = path.match(/^\/(id|en)(\/|$)/);
-  const cur = m ? m[1] : "en";
+  const cur = m ? m[1] : "id";
 
   localStorage.setItem(LOCALE_KEY, cur);
 
