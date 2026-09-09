@@ -10,6 +10,13 @@ hidden: true
 
 A collection of Capture The Flag (CTF) writeups, security research, and exploitation notes. Each writeup documents the methodology, tools, and thought process behind solving a challenge.
 
+## Content
+
+| Section | Description | Status |
+|---------|-------------|:------:|
+| [HackVister](/en/hackvister/index) | Data encoding & hash challenges from HackVister. | ✅ |
+| [OverTheWire — Natas](/en/overthewire/natas/index) | Server-side web security wargame, 12 levels completed. | ✅ |
+
 ## OverTheWire — Natas
 
 [Natas](/overthewire/natas) is a wargame focused on server-side web security, hosted by [OverTheWire](https://overthewire.org). The challenges progressively introduce common web vulnerabilities — from basic information disclosure to cryptographic flaws.

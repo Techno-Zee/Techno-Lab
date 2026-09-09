@@ -13,7 +13,25 @@ export default {
   navigation: [
     {
       group: "Overview",
-      pages: ["index"],
+      pages: ["index", "jadwal"],
+    },
+    {
+      group: "HackVister — Binary Encoding",
+      pages: [
+        "hackvister/index",
+        "hackvister/binary/index",
+        "hackvister/binary/ascii",
+        "hackvister/binary/binary",
+        "hackvister/binary/hex",
+        "hackvister/binary/base64",
+        "hackvister/binary/base32",
+        "hackvister/binary/url-encoding",
+        "hackvister/binary/html-entities",
+        "hackvister/binary/quoted-printable",
+        "hackvister/binary/uuencode",
+        "hackvister/binary/md5",
+        "hackvister/binary/sha1",
+      ],
     },
     {
       group: "OverTheWire — Natas",

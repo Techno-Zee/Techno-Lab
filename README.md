@@ -9,10 +9,19 @@
 Techno-Lab mendokumentasikan tantangan dari berbagai platform dan aktivitas, antara lain:
 
 - **OverTheWire** — *Wargame* progresif (Natas, Leviathan, Krypton, dll.)
+- **HackVister** — Latihan pengodean data, kriptografi, dan analisis berkas
 - **picoCTF** — Kompetisi CTF berskala global
 - **Hack The Box** — Mesin dan tantangan keamanan *real-world*
 - **Pengujian Penetrasi Resmi** — *Writeup* dengan izin tertulis
 - **Laboratorium Siber Pribadi** — Eksperimen dan simulasi *exploit*
+
+## Daftar Konten
+
+| Bagian | Deskripsi | Status |
+|--------|-----------|:------:|
+| Jadwal | Jadwal kuliah beserta informasi pendukung kampus | ✅ |
+| HackVister — Binary Encoding | Latihan pengodean data dan hash | ✅ |
+| OverTheWire — Natas | Wargame keamanan web sisi server (12 level) | ✅ |
 
 ## Struktur Proyek
 
@@ -23,16 +32,21 @@ Techno-Lab mendokumentasikan tantangan dari berbagai platform dan aktivitas, ant
 ├── pages/                  # Seluruh konten dokumentasi
 │   ├── id/                 # Konten bahasa Indonesia (aktif)
 │   │   ├── index.md
+│   │   ├── jadwal.md
+│   │   ├── hackvister/
 │   │   ├── overthewire/
 │   │   └── ...
 │   └── en/                 # Konten bahasa Inggris (dinonaktifkan sementara)
 │       ├── index.md
+│       ├── hackvister/
 │       ├── overthewire/
 │       └── ...
 ├── public/                 # Aset statis
 │   ├── favicon.svg
 │   ├── robots.txt
-│   └── sitemap.xml
+│   ├── sitemap.xml
+│   ├── Jadwal/             # Gambar pendukung halaman jadwal
+│   └── HackVister/         # Data & screenshot tantangan HackVister
 ├── styles/                 # Kustomisasi gaya
 ├── .tome/
 │   └── entry.tsx           # Skrip entry Tome

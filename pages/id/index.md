@@ -13,7 +13,21 @@ Website ini dibangun sebagai *knowledge base* yang mendokumentasikan proses bela
 
 ---
 
-## Tentang
+## Daftar Isi
+
+- [Tentang](#tentang)
+- [Tujuan](#tujuan)
+- [Konten](#konten)
+- [Prinsip Dokumentasi](#prinsip-dokumentasi)
+- [Struktur Dokumentasi](#struktur-dokumentasi)
+- [Teknologi](#teknologi)
+- [Ruang Lingkup](#ruang-lingkup)
+- [Penutup](#penutup)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Tentang {#tentang}
 
 Dalam dunia keamanan siber, pengetahuan berkembang sangat cepat. Teknik yang berhasil hari ini bisa berubah besok, dan solusi yang pernah ditemukan akan mudah terlupakan apabila tidak didokumentasikan.
 
@@ -21,7 +35,7 @@ Techno-Lab hadir sebagai tempat untuk mengarsipkan seluruh perjalanan pembelajar
 
 ---
 
-## Tujuan
+## Tujuan {#tujuan}
 
 Techno-Lab dibangun dengan beberapa tujuan utama:
 
@@ -33,7 +47,21 @@ Techno-Lab dibangun dengan beberapa tujuan utama:
 
 ---
 
-## Prinsip Dokumentasi
+## Konten {#konten}
+
+Seluruh materi dikelompokkan berdasarkan platform atau topik, dapat diakses melalui menu navigasi di samping:
+
+| Bagian | Deskripsi | Status |
+|--------|-----------|:------:|
+| [Jadwal](/id/jadwal) | Jadwal kuliah beserta informasi pendukung kampus. | ✅ |
+| [HackVister — Binary Encoding](/id/hackvister/index) | Latihan pengodean data dan hash dari HackVister. | ✅ |
+| [OverTheWire — Natas](/id/overthewire/natas/index) | Wargame keamanan web sisi server, 12 level selesai. | ✅ |
+
+Setiap bagian baru akan ditambahkan ke tabel ini dan menu navigasi ketika sudah mulai didokumentasikan.
+
+---
+
+## Prinsip Dokumentasi {#prinsip-dokumentasi}
 
 Setiap dokumentasi di Techno-Lab mengikuti beberapa prinsip sederhana:
 
@@ -45,23 +73,31 @@ Setiap dokumentasi di Techno-Lab mengikuti beberapa prinsip sederhana:
 
 ---
 
-## Struktur Dokumentasi
+## Struktur Dokumentasi {#struktur-dokumentasi}
 
-Saat ini struktur dokumentasi masih sederhana dan akan berkembang seiring bertambahnya materi.
+Struktur berkas mengikuti perutean folder Tome. Setiap platform memiliki direktori sendiri dan dikelompokkan dalam navigasi:
 
 ```text
 pages/
-└── Overthewire/
+├── index.md                    # Beranda
+├── jadwal.md                   # Jadwal kuliah
+├── hackvister/
+│   ├── index.md                # Ringkasan HackVister
+│   └── binary/
+│       └── index.md            # Modul Binary Encoding
+└── overthewire/
     └── natas/
-        ├── 01.md
-        ├── 02.md
-        ├── ...
-        └── 10.md
+        ├── index.md            # Ringkasan Natas
+        ├── level-0.md
+        ├── level-1.md
+        └── ...
 ```
+
+Struktur ini akan terus berkembang seiring bertambahnya materi baru.
 
 ---
 
-## Teknologi
+## Teknologi {#teknologi}
 
 Techno-Lab dibangun menggunakan beberapa teknologi berikut:
 
@@ -72,7 +108,7 @@ Techno-Lab dibangun menggunakan beberapa teknologi berikut:
 
 ---
 
-## Ruang Lingkup
+## Ruang Lingkup {#ruang-lingkup}
 
 Dokumentasi di dalam Techno-Lab dapat mencakup berbagai aktivitas pembelajaran keamanan siber, seperti:
 
@@ -92,7 +128,7 @@ Ruang lingkup tersebut akan terus bertambah mengikuti proses belajar dan eksplor
 
 ---
 
-## Penutup
+## Penutup {#penutup}
 
 Techno-Lab bukanlah kumpulan solusi instan, melainkan dokumentasi perjalanan belajar yang terus berkembang.
 
@@ -104,7 +140,7 @@ Karena pada akhirnya,
 
 ---
 
-## Disclaimer
+## Disclaimer {#disclaimer}
 
 Seluruh materi yang tersedia di Techno-Lab ditulis untuk tujuan edukasi, penelitian, dan dokumentasi pribadi.
 
