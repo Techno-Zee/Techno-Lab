@@ -12,14 +12,13 @@ Jadwal perkuliahan **Kelas 3A Informatika** beserta informasi waktu perkuliahan 
 
 | Hari       | Mata Kuliah                    | Dosen                         | Waktu         | Ruang |
 | ---------- | ------------------------------ | ----------------------------- | ------------- | ----- |
-| **Senin**  | Pemrograman Berorientasi Obyek | Agung Prasetya, M.Kom.        | 07.00 – 09.30 | C1.2  |
-|            | Interaksi Manusia Komputer     | Taufiq Agung Cahyono, M.Kom.  | 09.30 – 12.00 | B1.3  |
-| **Selasa** | Kecerdasan Buatan              | Yayak Kartika Sari, M.Kom.    | 07.50 – 10.20 | B2.3  |
-|            | Dasar Desain                   | Rico Andhika Putra, M.Pd.     | 10.20 – 12.00 | B2.3  |
+| **Senin**  | Interaksi Manusia Komputer     | Taufiq Agung Cahyono, M.Kom.  | 07.00 – 09.30 | B1.3  |
+|            | Dasar Desain                   | Rico Andhika Putra, M.Pd.     | 09.30 – 10.20 | D2.1  |
+| **Selasa** | Kecerdasan Buatan              | Yayak Kartika Sari, M.Kom.    | 07.00 – 09.30 | B2.3  |
+|            | Pemrograman Berorientasi Obyek | Agung Prasetya, M.Kom.        | 09.30 – 12.00 | C1.2  |
 | **Rabu**   | Rekayasa Perangkat Lunak       | Yayak Kartika Sari, M.Kom.    | 07.50 – 10.20 | D2.1  |
 | **Kamis**  | Pemrograman Web                | Moeng Sakmar, M.Kom.          | 07.50 – 10.20 | E1.4  |
 |            | Jaringan Komputer              | Mohamad Khoirul Ansor, M.Kom. | 10.20 – 14.10 | F1.2  |
-
 ---
 
 ## Informasi Waktu & Lokasi
